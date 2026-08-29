@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Extra Hotel</title>
+    <meta name="description" content="Boka ditt rum på Extra Hotel Stockholm med enkelt bokningsformulär.">
+</head>
+
+<body>
+    <header>
+        <div id="title-box">
+            <div id="logo-container"><img id="logo" alt="Extra Hotel Stockholm Logo" src="logo.webp"></div>
+
+            <h1 id="company">Extra Hotel Stockholm</h1>
+        </div>
+        <nav>
+            <button id="nav-toggle" onclick="toggleLinks()">
+                <span></span><span></span><span></span>
+            </button>
+            <a class="nav-links" href="index.html">Hem</a>
+            <a class="nav-links" style="background-color: #d6c57e; text-decoration: underline;">Boka</a>
+            <a class="nav-links" href="contact.html">Kontakt</a>
+            <a class="nav-links" href="about.html">Om oss</a>
+        </nav>
+
+    </header>
+    <main>
+        <div class="group-box">
+            <div>
+                <img src="room.webp" alt="Room example" class="body-image">
+            </div>
+            <div class="text-box">
+                <h2>Boka ett rum</h2>
+                <form id="booking-form" action="https://www.w3schools.com/action_page.php" method="get">
+                    <label for="arrival-date">Ankomst:</label>
+                    <input type="date" id="arrival-date" name="arrival-date" required>
+                    <label for="leave-date">Avresa:</label>
+                    <input type="date" id="leave-date" name="leave-date" required>
+                    <label for="beds-amount">Sängar:</label>
+                    <input type="number" id="beds-amount" name="beds-amount" min="1" max="8" placeholder="Antal"
+                        required>
+                    <label for="first-name">Förnamn:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Förnamn" minlength="1"
+                        maxlength="20" required>
+                    <label for="last-name">Efternamn:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Efternamn" minlength="1"
+                        maxlength="20" required>
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" placeholder="exempel@domän.com" minlength="5"
+                        maxlength="40" required>
+
+
+                    <input type="submit" value="Skicka">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Extra Hotel Stockholm |</p>
+        <p>Storgatan 1 |</p>
+        <p>123 45 Stockholm |</p>
+        <p>071-234 56 78</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

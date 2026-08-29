@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F1F7ED;
+}
+
+/* */
+header {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+#title-box {
+    background-color: #254337;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 130px;
+}
+
+#logo-container {
+    overflow: hidden;
+    height: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#logo {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    transform: scale(1.5);
+    transform-origin: center;
+}
+
+#company {
+    color: white;
+    margin: auto 0;
+    font-size: 5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+
+
+nav {
+    background-color: #F1F7ED;
+    border-bottom: 2px solid #254337;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+/* Navigations Länkar*/
+.nav-links {
+    font-size: 2em;
+    font-family: "Lucida Console", monospace;
+    color: black;
+    padding: 0.2em 2%;
+    text-decoration: none;
+}
+
+/* Navigations Knap*/
+#nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2em;
+    height: 1.6em;
+    background: none;
+    border: none;
+    margin: 0.5em 1em;
+}
+
+/* Navigations Knapp symbol*/
+#nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
+
+/* Main */
+.group-box {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    justify-content: space-evenly;
+    margin: 1em 3%;
+}
+
+#history-box {
+    grid-template-columns: 25% 70%;
+    grid-auto-rows: 50% 50%;
+    overflow: hidden;
+}
+
+
+.group-box>div {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.body-image {
+    object-fit: cover;
+    width: 100%;
+    height: max(400px, 60vh);
+    border-radius: 1em;
+}
+
+#history-box .body-image {
+    height: max(200px, 30vh);
+}
+
+p {
+    font-size: 1.3em;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin: 1em 0;
+}
+
+#history-box h2 {
+    margin: 0.2em 0;
+}
+
+footer,
+.text-box {
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #E0EEC6;
+    border: 2px solid #254337;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer {
+    width: clamp(300px, 90%, 1000px);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 16px;
+    justify-content: center;
+    /* centers the group of p's horizontally */
+    align-items: center;
+    /* centers them vertically if footer has extra height */
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.7em 0.1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+form label {
+    text-align: right;
+}
+
+
+@media (max-width: 1100px) {
+    .group-box {
+        grid-template-columns: 1fr;
+    }
+
+    #history-box #history-first {
+        grid-area: c1;
+    }
+
+    #history-box #history-secound {
+        grid-area: c2;
+    }
+
+    #history-box #history-third {
+        grid-area: c3;
+    }
+
+    #history-box #history-fourth {
+        grid-area: c4;
+    }
+
+    #history-box {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "c2 c2"
+            "c1 c3"
+            "c4 c4";
+    }
+
+    .body-image {
+        height: 400px;
+    }
+
+    #history-box .body-image {
+        height: 200px;
+    }
+
+    footer p {
+        font-size: 1.2em;
+    }
+
+    #company {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    #history-box p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #company {
+        font-size: 1.5em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    .body-image {
+        height: 250px;
+    }
+
+    #history-box .body-image {
+        height: 175px;
+    }
+
+    #nav-toggle {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #history-box p {
+        font-size: 0.8em;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin: 0.5em 0;
+    }
+
+    #title-box {
+        height: 115px;
+    }
+
+    form {
+        gap: 0.3em 0.1em;
+    }
+}
