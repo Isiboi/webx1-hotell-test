@@ -42,7 +42,8 @@ header {
     color: white;
     margin: auto 0;
     font-size: 5em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
+    font-weight: normal;
     overflow: hidden;
 }
 
@@ -113,43 +114,55 @@ nav {
     border-radius: 1em;
 }
 
+#map {
+    width: 100%;
+    height: max(400px, 60vh);
+    border: 0;
+}
+
 #history-box .body-image {
     height: max(200px, 30vh);
 }
 
 p {
+    text-align: left;
     font-size: 1.3em;
+    max-width: 65ch;
+    margin: 0.5em auto 0;
 }
 
 h2 {
+    text-align: center;
     font-size: 2.5em;
-    margin: 1em 0;
+    margin: 0.5em 0;
 }
 
 #history-box h2 {
-    margin: 0.2em 0;
+    margin: 0;
 }
 
 footer,
 .text-box {
-    text-align: center;
-    padding: 1em;
     border-radius: 1em;
     background-color: #E0EEC6;
-    border: 2px solid #254337;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 4px solid #254337;
+    font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+}
+
+.text-box {
+    padding: 1em;
 }
 
 footer {
+    padding: 0.8em;
+    text-align: center;
     width: clamp(300px, 90%, 1000px);
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 0 16px;
     justify-content: center;
-    /* centers the group of p's horizontally */
     align-items: center;
-    /* centers them vertically if footer has extra height */
 }
 
 footer p {
@@ -164,6 +177,7 @@ form {
     gap: 0.7em 0.1em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
+    font-size: 1.3em;
 }
 
 form label {
@@ -201,7 +215,8 @@ form label {
             "c4 c4";
     }
 
-    .body-image {
+    .body-image,
+    #map {
         height: 400px;
     }
 
@@ -240,7 +255,8 @@ form label {
         font-size: 0.9em;
     }
 
-    .body-image {
+    .body-image,
+    #map {
         height: 250px;
     }
 

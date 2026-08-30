@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Extra Hotel - Hitta</title>
+    <meta name="description" content="Boka ditt rum på Extra Hotel Stockholm med enkelt bokningsformulär.">
+</head>
+
+<body>
+    <header>
+        <div id="title-box">
+            <div id="logo-container"><img id="logo" alt="Extra Hotel Stockholm Logo" src="logo.webp"></div>
+
+            <h1 id="company">Extra Hotel Stockholm</h1>
+        </div>
+        <nav>
+            <button id="nav-toggle" onclick="toggleLinks()">
+                <span></span><span></span><span></span>
+            </button>
+            <a class="nav-links" href="index.html">Hem</a>
+            <a class="nav-links" href="book.html">Boka</a>
+            <a class="nav-links" href="contact.html">Kontakt</a>
+            <a class="nav-links" href="about.html">Om oss</a>
+            <a class="nav-links" style="background-color: #d6c57e; text-decoration: underline;">Hitta</a>
+        </nav>
+
+    </header>
+    <main>
+        <div class="group-box">
+            <div>
+                <iframe id="map" alt="Map off location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.824231600815!2d18.07753307658627!3d59.335888310496266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5adac5da63%3A0x43994284ef8fe2eb!2sStorgatan%201%2C%20114%2044%20Stockholm!5e0!3m2!1sen!2sse!4v1788116720006!5m2!1sen!2sse"
+                    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <div class="text-box">
+                <h2>
+                    Hitta hit
+                </h2>
+                <p>
+                    Med tåg: Gå av vid Stockholms Centralstation. Ta sedan tunnelbanan, taxi eller promenera cirka 10–15
+                    minuter till Storgatan 1.
+                </p>
+                <p>
+                    Med flyg: Ta Arlanda Express eller flygbussen från Arlanda till Stockholm Centralstation. Ta sedan
+                    tunnelbanan, taxi eller promenera cirka 10–15 minuter till Storgatan 1.
+                </p>
+                <p>
+                    Med bil: Ange Storgatan 1, Stockholm i din GPS. Parkeringsmöjligheter finns i närområdet.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Extra Hotel Stockholm |</p>
+        <p>Storgatan 1 |</p>
+        <p>123 45 Stockholm |</p>
+        <p>071-234 56 78</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
